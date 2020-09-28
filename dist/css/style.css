@@ -578,3 +578,16 @@ ul {
 .reviews-link__img {
   display: block;
 }
+
+.maps {
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  height: 416px;
+  width: 100%;
+}
+
+.footer {
+  position: relative;
+}
