@@ -1,3 +1,5 @@
+// ==========map
+
 ymaps.ready(init);
 
 function init() {
@@ -36,3 +38,28 @@ function init() {
   myMap.behaviors.disable('scrollZoom');
 
 }
+
+
+
+// ========= feadback form
+
+
+const formFeadback = document.querySelector('.callback__form');
+const contactsBtn = document.querySelector('.contacts__btn');
+
+contactsBtn.addEventListener('click', (event) => {
+  event.preventDefault();
+  formFeadback.classList.add('form__cb--opened');
+  formFeadback.classList.remove('form__cb--closed');
+});
+
+
+formFeadback.addEventListener('click', (event) => {
+  let element = event.target;
+  if (element.classList.contains('callback-btn__close')) {
+    event.preventDefault();
+    formFeadback.classList.remove('form__cb--opened');
+    formFeadback.classList.add('form__cb--closed');
+
+  }
+});

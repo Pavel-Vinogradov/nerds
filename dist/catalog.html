@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=e01616f8-4d6a-4f67-b87a-a40bda513911&lang=ru_RU">
+  </script>
+  <title>Web Studio Catalog</title>
+</head>
+
+<body>
+  <header class="header ">
+    <div class="header-block container">
+      <nav class="header-nav">
+        <a href="index.html" class="header-nav__logo"></a>
+        <ul class="header-nav__list">
+          <li class="header-nav__item"><a href="#" class="header-nav__link">Студия</a></li>
+          <li class="header-nav__item"><a href="#" class="header-nav__link">Клиенты</a></li>
+          <li class="header-nav__item"><a href="#" class="header-nav__link">Магазин</a></li>
+          <li class="header-nav__item"><a href="#" class="header-nav__link">Контакты</a></li>
+        </ul>
+        <div class="header-nav__user">
+          <a href="#" class="header-nav__link header-nav__link--cart">Корзина</a>
+        </div>
+      </nav>
+
+    </div>
+
+    <h1 class="header-title__text container">Магазин готовых шаблонов</h1>
+
+  </header>
+  <main class="main">
+    <div class="catalog-block container">
+      <form class="catalog__form" action="https://echo.htmlacademy.ru" method="get">
+        <fieldset class="fieldser catalog-price__form">
+          <legend class="catalog__legend">Стоимость:</legend>
+          <div class="price-filter catalog__price-filter">
+            <div class="price-filter__range">
+              <div class="price-filter__range-scale">
+                <div class="price-filter__range-bar"></div><button
+                  class="price-filter__range-handle price-filter__range-handle--min" type="button"
+                  aria-label="Минимально"></button><button
+                  class="price-filter__range-handle price-filter__range-handle--max" type="button"
+                  aria-label="Максимально"></button>
+              </div>
+            </div>
+            <p class="price-filter__interval"><label class="price-filter__label">От <input class="price-filter__input"
+                  type="text" name="min-price" value="0"></label><label
+                class="price-filter__label price-filter__label--max-price">До <input class="price-filter__input"
+                  type="text" name="max-price" value="15000"></label></p>
+          </div>
+        </fieldset>
+        <fieldset class="fieldser catalog-grid__form">
+          <legend class="catalog__legend">Сетка:</legend>
+          <ul class="catalog__input-wrapper">
+            <li class="catalog__input-block"><input class="catalog__radio visually-hidden" type="radio"
+                id="filter-adaptive" name="grid" value="adaptive" checked="checked"><label
+                class="catalog__label catalog__label-radio" for="filter-adaptive">Адаптивная</label></li>
+            <li class="catalog__input-block"><input class="catalog__radio visually-hidden" type="radio"
+                id="filter-fixed" name="grid" value="fixed"><label class="catalog__label catalog__label-radio"
+                for="filter-fixed">Фиксированная</label></li>
+            <li class="catalog__input-block"><input class="catalog__radio visually-hidden" type="radio"
+                id="filter-fluid" name="grid" value="fluid"><label class="catalog__label catalog__label-radio"
+                for="filter-fluid">Резиновая</label></li>
+          </ul>
+        </fieldset>
+        <fieldset class="fieldser catalog-features__form"></fieldset>
+        <button class="btn btn--gray catalog__btn">Показать</button>
+
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__maps">
+      <div class="maps" id="map" style="width: 100%; height: 416px"></div>
+      <div class="footer-wrapper">
+        <div class="contacts">
+          <b class="contacts-title">NЁRDS DESIGN STUDIO</b>
+          <p class="contacts-subtitle">191186, Санкт-Петербург,
+            ул. Б. Конюшенная, д. 19/8</p>
+          <p class="contacts-subtitle">тел. +7 (812) 275-75-75</p>
+          <a href="" class="btn contacts__btn  btn--red">Напишите нам</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-social container">
+      <ul class="footer-social__list">
+        <li class="footer-social__item"><a href="https://vk.com" class=" footer-social__link">
+            <img src="img/vk-icon.svg" alt="vk-icon" class="footer-social__icon"></a></li>
+        <li class="footer-social__item"><a href="https://www.instagram.com" class=" footer-social__link">
+            <img src="img/fb-icon.svg" alt="fb-icon" class="footer-social__icon"></a></li>
+        <li class="footer-social__item"><a href="https://www.instagram.com" class="footer-social__link">
+            <img src="img/insta-icon.svg" alt="insta-icon" class="footer-social__icon"></a></li>
+      </ul>
+      <section class="footer-offer">
+        <h2 class="footer-offer__title">Давайте дружить, это выгодно!
+
+        </h2>
+        <p class="footer-offer__subtitle">Скидка 10% для друзей из социальных сетей.</p>
+      </section>
+    </div>
+  </footer>
+
+  <form class="callback__form page__form" action="https://echo.htmlacademy.ru" method="post">
+    <h2 class="callback-title">Напишите нам</h2>
+    <div class="callback-block__row">
+      <div class="callback-block__collum">
+        <label for="callback-block__label" class="callback-block__lavel">Ваше имя:</label>
+        <input type="text" id="callback-name" placeholder="Имя Фамилия" class="callback-block__input">
+      </div>
+      <div class="callback-block__collum">
+        <label class="callback-block__lavel" for="callback-email">Ваш e-mail:</label>
+        <input class="callback-block__text" type="email" name="email" id="callback-email"
+          placeholder="email@example.com">
+      </div>
+    </div>
+    <div class="callback-row">
+      <label class="callback-block__label" for="callback-message">Текст письма:</label>
+      <textarea class="callback-block__text callback-block__textarea" name="message" id="callback-message"
+        placeholder="В свободной форме"></textarea>
+    </div>
+    <button class="btn btn--red callback__btn">Отправить</button>
+    <button class="callback-btn__close" aria-label="Закрыть" type="button"></button>
+  </form>
+
+  <script src="js/main.min.js"></script>
+
+
+</body>
+
+</html>
