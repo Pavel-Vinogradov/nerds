@@ -3,9 +3,9 @@ ymaps.ready(init);
 function init() {
   var myMap = new ymaps.Map("map", {
     // Координаты центра карты
-    center: [59.93944115603922, 30.32302403991186],
+    center: [59.938635, 30.323118],
     // Масштаб карты
-    zoom: 16,
+    zoom: 17,
     // Выключаем все управление картой
     controls: []
   });
@@ -13,16 +13,16 @@ function init() {
   var myGeoObjects = [];
 
   // Указываем координаты метки
-  myGeoObjects = new ymaps.Placemark([59.93944115603922, 30.32302403991186], {
-    balloonContentBody: 'WEB \'NERDS\'',
+  myGeoObjects = new ymaps.Placemark([59.938635, 30.323118], {
+    balloonContentBody: 'WEB \'NERDS\ Б. Конюшенная, д. 19/8  \'',
   }, {
     iconLayout: 'default#image',
     // Путь до нашей картинки
-    iconImageHref: '/img/map-marker.png',
+    iconImageHref: 'img/map-marker.png',
     // Размеры иконки
     iconImageSize: [231, 190],
     // Смещение верхнего угла относительно основания иконки
-    iconImageOffset: [-51, -100]
+    iconImageOffset: [-60, -180]
   });
 
   var clusterer = new ymaps.Clusterer({

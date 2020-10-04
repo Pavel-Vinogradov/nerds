@@ -9,8 +9,7 @@
     crossorigin="anonymous" />
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=e01616f8-4d6a-4f67-b87a-a40bda513911&lang=ru_RU"
-    type="text/javascript">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=e01616f8-4d6a-4f67-b87a-a40bda513911&lang=ru_RU">
   </script>
   <title>nerds</title>
 </head>
@@ -22,13 +21,15 @@
       <nav class="header-nav">
         <a href="index.html" class="header-nav__logo"></a>
         <ul class="header-nav__list">
-          <li class="header-nav__item"><a href="" class="header-nav__link">Студия</a></li>
-          <li class="header-nav__item"><a href="" class="header-nav__link">Клиенты</a></li>
-          <li class="header-nav__item"><a href="" class="header-nav__link">Магазин</a></li>
-          <li class="header-nav__item"><a href="" class="header-nav__link">Контакты</a></li>
+          <li class="header-nav__item"><a href="#" class="header-nav__link">Студия</a></li>
+          <li class="header-nav__item"><a href="#" class="header-nav__link">Клиенты</a></li>
+          <li class="header-nav__item"><a href="#" class="header-nav__link">Магазин</a></li>
+          <li class="header-nav__item"><a href="#" class="header-nav__link">Контакты</a></li>
         </ul>
-        <div class="header-nav__user"><a href="" class="header-nav__link header-nav__link--cart">Корзина</a></div>
-        </>
+      </nav>
+      <div class="header-nav__user">
+        <a href="#" class="header-nav__link header-nav__link--cart">Корзина</a>
+      </div>
     </div>
 
     <section class="slider container">
@@ -54,19 +55,19 @@
     <section class="content-block container">
       <ul class="content-list">
         <li class="content-item">
-          <img src="/img/illustration-1.jpg" alt="illustration_1" class="content-item__img">
+          <img src="img/illustration-1.jpg" alt="illustration_1" class="content-item__img">
           <h3 class="content-title">Веб-сайты</h3>
           <p class="content-subtitle">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
           <a href="" class="btn content_button btn--red"><span>ЗАКАЗАТЬ</span></a>
         </li>
         <li class="content-item">
-          <img src="/img/illustration-2.jpg" alt="illustration_2" class="content-item__img">
+          <img src="img/illustration-2.jpg" alt="illustration_2" class="content-item__img">
           <h3 class="content-title">Приложения</h3>
           <p class="content-subtitle">Покорите топ-10 приложений в AppStore и Google Play</p>
           <a href="" class="btn content_button btn--green"><span>ЗАКАЗАТЬ</span></a>
         </li>
         <li class="content-item">
-          <img src="/img/illustration-3.jpg" alt="illustration_3" class="content-item__img">
+          <img src="img/illustration-3.jpg" alt="illustration_3" class="content-item__img">
           <h3 class="content-title">Презентации</h3>
           <p class="content-subtitle">Вы даже не подозреваете,
             насколько вы изумительны!</p>
@@ -94,7 +95,7 @@
       </div>
 
       <div class="company-statistics">
-        <img class="company__image" src="/img/nerds-illustration.jpg" alt="Logo">
+        <img class="company__image" src="img/nerds-illustration.jpg" alt="Logo">
         <table class="company__table-indication table-indication">
           <caption class="table-indication__caption">С 2004 года любим точность во всем:</caption>
 
@@ -103,7 +104,7 @@
               <td class="table-indication__cell">146<sup>%</sup></td>
               <td class="table-indication__cell">100<sup>%</sup></td>
               <td class="table-indication__cell">50<sup>%</sup></td>
-
+            </tr>
           </thead>
           <tbody>
             <tr>
@@ -111,35 +112,54 @@
               <th class="table-indication__header">Соблюдение сроков</th>
               <th class="table-indication__header">Минимальная предоплата</th>
             </tr>
-            </tr>
+
           </tbody>
         </table>
       </div>
     </section>
     <div class="reviews container">
       <ul class="reviews-list">
-        <li class="reviews-items"><a href="https://htmlacademy.ru/" class="reviews-link"><img src="/img/logo-1.png"
+        <li class="reviews-items"><a href="https://htmlacademy.ru/" class="reviews-link"><img src="img/logo-1.png"
               alt="HTML Academy" class="reviews-link__img"></a></li>
-        <li class="reviews-items"><a href="" class="reviews-link"><img src="/img/logo-2.png" alt="HTML Barbershop"
+        <li class="reviews-items"><a href="" class="reviews-link"><img src="img/logo-2.png" alt="HTML Barbershop"
               class="reviews-link__img"></a></li>
-        <li class="reviews-items"><a href="" class="reviews-link"><img src="/img/logo-3.png" alt="HTML Pink"
+        <li class="reviews-items"><a href="" class="reviews-link"><img src="img/logo-3.png" alt="HTML Pink"
               class="reviews-link__img"></a></li>
-        <li class="reviews-items"><a href="" class="reviews-link"><img src="/img/logo-4.png" alt="HTML  Mishka"
+        <li class="reviews-items"><a href="" class="reviews-link"><img src="img/logo-4.png" alt="HTML  Mishka"
               class="reviews-link__img"></a></li>
       </ul>
     </div>
   </main>
 
   <footer class="footer">
-    <div class="maps" id="map" style="width: 100%; height: 416px"></div>
-    <div class="contacts-wrapper">
-      <div class="contacts">
-        <b class="contacts-title">NЁRDS DESIGN STUDIO</b>
-        <p class="contacts-subtitle">191186, Санкт-Петербург,
-          ул. Б. Конюшенная, д. 19/8</p>
-        <p class="contacts-subtitle">тел. +7 (812) 275-75-75</p>
-        <a href="" class="btn contacts_btn">Напишите нам</a>
+    <div class="footer__maps">
+      <div class="maps" id="map" style="width: 100%; height: 416px"></div>
+      <div class="footer-wrapper">
+        <div class="contacts">
+          <b class="contacts-title">NЁRDS DESIGN STUDIO</b>
+          <p class="contacts-subtitle">191186, Санкт-Петербург,
+            ул. Б. Конюшенная, д. 19/8</p>
+          <p class="contacts-subtitle">тел. +7 (812) 275-75-75</p>
+          <a href="" class="btn contacts__btn  btn--red">Напишите нам</a>
+        </div>
       </div>
+    </div>
+
+    <div class="footer-social container">
+      <ul class="footer-social__list">
+        <li class="footer-social__item"><a href="https://vk.com" class=" footer-social__link">
+            <img src="img/vk-icon.svg" alt="vk-icon" class="footer-social__icon"></a></li>
+        <li class="footer-social__item"><a href="https://www.instagram.com" class=" footer-social__link">
+            <img src="img/fb-icon.svg" alt="fb-icon" class="footer-social__icon"></a></li>
+        <li class="footer-social__item"><a href="https://www.instagram.com" class="footer-social__link">
+            <img src="img/insta-icon.svg" alt="insta-icon" class="footer-social__icon"></a></li>
+      </ul>
+      <section class="footer-offer">
+        <h2 class="footer-offer__title">Давайте дружить, это выгодно!
+
+        </h2>
+        <p class="footer-offer__subtitle">Скидка 10% для друзей из социальных сетей.</p>
+      </section>
     </div>
   </footer>
 
