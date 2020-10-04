@@ -30,7 +30,7 @@
           <a href="#" class="header-nav__link header-nav__link--cart">Корзина</a>
         </div>
       </nav>
-      
+
     </div>
 
     <section class="slider container">
@@ -164,6 +164,28 @@
     </div>
   </footer>
 
+
+  <form class="callback__form page__form" action="https://echo.htmlacademy.ru" method="post">
+    <h2 class="callback-title">Напишите нам</h2>
+    <div class="callback-block__row">
+      <div class="callback-block__collum">
+        <label for="callback-block__label" class="callback-block__lavel">Ваше имя:</label>
+        <input type="text" id="callback-name" placeholder="Имя Фамилия" class="callback-block__input">
+      </div>
+      <div class="callback-block__collum">
+        <label class="callback-block__lavel" for="callback-email">Ваш e-mail:</label>
+        <input class="callback-block__text" type="email" name="email" id="callback-email"
+          placeholder="email@example.com">
+      </div>
+    </div>
+    <div class="callback-row">
+      <label class="callback-block__label" for="callback-message">Текст письма:</label>
+      <textarea class="callback-block__text callback-block__textarea" name="message" id="callback-message"
+        placeholder="В свободной форме"></textarea>
+    </div>
+    <button class="btn btn--red callback__btn">Отправить</button>
+    <button class="callback-btn__close" aria-label="Закрыть" type="button"></button>
+  </form>
 
   <script src="js/main.js"></script>
 

@@ -684,3 +684,136 @@ ul {
   margin-top: 23px;
   padding: 16px 44px;
 }
+
+.callback__form {
+  padding: 65px 100px 85px;
+  width: 960px;
+  background-color: #fff;
+  box-shadow: 0 20px 40px 0 rgba(0, 1, 1, 0.75);
+}
+
+.callback-title {
+  margin-bottom: 40px;
+  font-size: 45px;
+}
+
+.callback-block__row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 34px;
+}
+
+.callback-block__collum {
+  width: 360px;
+}
+
+.callback-block__lavel {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.callback-block__input {
+  padding: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  font: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  color: rgba(68, 68, 68, 0.5);
+  border: 2px solid #d7dcde;
+  border-radius: 3px;
+}
+
+.callback-block__label {
+  margin-bottom: 10px;
+}
+
+.callback-block__label:hover,
+.callback-block__label:before {
+  opacity: 1;
+}
+
+.callback-block__text {
+  padding: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  font: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  color: rgba(68, 68, 68, 0.5);
+  border: 2px solid #d7dcde;
+  border-radius: 3px;
+}
+
+.callback-block__textarea {
+  min-height: 118px;
+  resize: vertical;
+}
+
+.callback__btn {
+  margin-top: 47px;
+  padding: 16px 84px;
+}
+
+.callback-btn__close {
+  position: absolute;
+  top: 78px;
+  right: 90px;
+  padding: 0;
+  width: 25px;
+  height: 25px;
+  border: 0;
+  background: 0 0;
+  opacity: .3;
+  -webkit-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+  cursor: pointer;
+}
+
+.callback-btn__close::before,
+.callback-btn__close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 25px;
+  height: 5px;
+  background-color: #fb565a;
+}
+
+.callback-btn__close::before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.callback-btn__close::after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.callback-btn__close:hover {
+  opacity: 1;
+}
+
+.callback-btn__close:active {
+  opacity: .1;
+}
+
+.page__form {
+  position: fixed;
+  visibility: hidden;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
