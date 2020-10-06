@@ -54,12 +54,18 @@ contactsBtn.addEventListener('click', (event) => {
 });
 
 
-formFeadback.addEventListener('click', (event) => {
+
+
+formFeadback.addEventListener('click', closeFormFeedback);
+window.addEventListener('keydown', closeFormFeedback);
+
+function closeFormFeedback(event) {
+
   let element = event.target;
-  if (element.classList.contains('callback-btn__close')) {
+  if (element.classList.contains('callback-btn__close') || event.keyCode === 27) {
     event.preventDefault();
     formFeadback.classList.remove('form__cb--opened');
     formFeadback.classList.add('form__cb--closed');
 
   }
-});
+}
