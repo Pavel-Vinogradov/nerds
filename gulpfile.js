@@ -1,27 +1,29 @@
-var gulp = require('gulp');
-var prodjectFolder = 'dist'; //add  folder  dist
-var sourceFolder = 'app'; // add folder   app
-var src = require('gulp');
-var dest = require('gulp');
-var browserSync = require('browser-sync').create(); //add live server
-var sass = require('gulp-sass'); // add sass/scss 
-var fileinclude = require('gulp-file-include'); // add plugin file -inclide
-var del = require('del'); // add plugin delit
-var autoprefixer = require('gulp-autoprefixer'); //add plugin gulp-autoprefixer
-var gcmq = require('gulp-group-css-media-queries'); //add css-media-queries
-var cleanCSS = require('gulp-clean-css'); //add clean-css
-var rename = require('gulp-rename'); //add rename
-var uglify = require('gulp-uglify-es').default; //add uglify
-var concat = require('gulp-concat');
-var imagemin = require('gulp-imagemin');
-var webp = require('gulp-webp');
-var ttf2woff = require('gulp-ttf2woff');
-var ttf2woff2 = require('gulp-ttf2woff2');
-var fonter = require('gulp-fonter');
-var fs = require('fs');
+' use strict';
+
+let gulp = require('gulp');
+let prodjectFolder = 'dist'; //add  folder  dist
+let sourceFolder = 'app'; // add folder   app
+let src = require('gulp');
+let dest = require('gulp');
+let browserSync = require('browser-sync').create(); //add live server
+let sass = require('gulp-sass'); // add sass/scss 
+let fileinclude = require('gulp-file-include'); // add plugin file -inclide
+let del = require('del'); // add plugin delit
+let autoprefixer = require('gulp-autoprefixer'); //add plugin gulp-autoprefixer
+let gcmq = require('gulp-group-css-media-queries'); //add css-media-queries
+let cleanCSS = require('gulp-clean-css'); //add clean-css
+let rename = require('gulp-rename'); //add rename
+let uglify = require('gulp-uglify-es').default; //add uglify
+let concat = require('gulp-concat');
+let imagemin = require('gulp-imagemin');
+let webp = require('gulp-webp');
+let ttf2woff = require('gulp-ttf2woff');
+let ttf2woff2 = require('gulp-ttf2woff2');
+let fonter = require('gulp-fonter');
+let fs = require('fs');
 /* init folder paths */
 
-var path = {
+let path = {
 
   build: {
 
@@ -232,14 +234,14 @@ gulp.task('otfFonts', function () {
 
 function fontsStyle(params) {
 
-  var file_content = fs.readFileSync(sourceFolder + '/scss/fonts.scss');
+  let file_content = fs.readFileSync(sourceFolder + '/scss/fonts.scss');
   if (file_content == '') {
     fs.writeFile(sourceFolder + '/scss/fonts.scss', '', cb);
     return fs.readdir(path.build.fonts, function (err, items) {
       if (items) {
-        var c_fontname;
-        for (var i = 0; i < items.length; i++) {
-          var fontname = items[i].split('.');
+        let c_fontname;
+        for (let i = 0; i < items.length; i++) {
+          let fontname = items[i].split('.');
           fontname = fontname[0];
           if (c_fontname != fontname) {
             fs.appendFile(sourceFolder + '/scss/fonts.scss', '@include font("' + fontname + '", "' + fontname + '", "400", "normal");\r\n', cb);
@@ -254,8 +256,8 @@ function fontsStyle(params) {
 function cb() {}
 
 
-var build = gulp.series(clean, gulp.parallel(css, fonts, images, js, html), fontsStyle);
-var watch = gulp.parallel(build, watchFiles, browser_Sync);
+let build = gulp.series(clean, gulp.parallel(css, fonts, images, js, html), fontsStyle);
+let watch = gulp.parallel(build, watchFiles, browser_Sync);
 
 
 // exports.css_blbs = css_blbs;
