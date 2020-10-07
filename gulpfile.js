@@ -21,6 +21,8 @@ let ttf2woff = require('gulp-ttf2woff');
 let ttf2woff2 = require('gulp-ttf2woff2');
 let fonter = require('gulp-fonter');
 let fs = require('fs');
+let ghPages = require('gulp-gh-pages');
+
 /* init folder paths */
 
 let path = {
@@ -83,6 +85,10 @@ function html() {
 
 }
 
+gulp.task('deploy', function () {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
 /* init watch*/
 
 function watchFiles() {
